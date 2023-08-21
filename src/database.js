@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose
-    .connect('mongodb://localhost/unicomer', {
+    .connect(process.env.MONGODB_CONNECT_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
